@@ -1,0 +1,824 @@
+/* ==========================================================================
+   1. VARIABLES & CONFIGURATION DE BASE
+   ========================================================================== */
+:root {
+  --primary-orange: #ff6b00;
+  --primary-hover: #e05d00;
+  --bg-dark: #121212;
+  --bg-secondary: #1a1a1a;
+  --card-bg: #1e1e1e;
+  --text-light: #f8f9fa;
+  --text-muted: #e4e7eb;
+  --font-title: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ==========================================================================
+   2. EN-TÊTE ET NAVIGATION (Tête de page)
+   ========================================================================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background-color: rgba(18, 18, 18, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.logo {
+  font-family: var(--font-title);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.logo span {
+  color: var(--primary-orange);
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary-orange);
+}
+
+/* ==========================================================================
+   3. BOUTONS & EFFETS HOVER
+   ========================================================================== */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--primary-orange);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 107, 0, 0.4);
+}
+
+.btn-outline {
+  border-color: var(--primary-orange);
+  color: var(--primary-orange);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-orange);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   MENU HAMBURGER RESPONSIVE
+   ========================================================================== */
+
+/* Masqué par défaut sur PC */
+.hamburger {
+  display: none;
+  margin-left: auto;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 5px;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: var(--text-light, #f8f9fa);
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animation du hamburger en croix (X) lorsqu'il est actif */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+  background-color: var(--primary-orange, #ff6b00);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+  background-color: var(--primary-orange, #ff6b00);
+}
+
+/* Adaptation pour les écrans de moins de 768px (Tablettes et Mobiles) */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Affiche le bouton sur mobile */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(18, 18, 18, 0.98);
+    backdrop-filter: blur(12px);
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 0;
+    border-bottom: 1px solid #333;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    
+    /* Effet replié par défaut */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+  }
+
+  /* État ouvert du menu mobile */
+  .nav-links.active {
+    max-height: 300px;
+    opacity: 1;
+    padding: 30px 0;
+  }
+}
+
+
+/* ==========================================================================
+   SECTION HÉROÏQUE (AVEC IMAGE DE FOND)
+   ========================================================================== */
+.hero-section {
+  /* Le gradient noir semi-transparent (0.6) se superpose à l'image pour l'assombrir et faire ressortir le texte */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('imaje-fond.jpg');
+  
+  /* Paramètres pour que l'image s'adapte parfaitement à l'écran */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Dimensions et alignement du contenu */
+  height: 85vh; /* Prend 85% de la hauteur de l'écran */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content {
+  max-width: 750px;
+}
+
+.hero-content h1 {
+  font-family: var(--font-title);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  color: #d1d1d1;
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+}
+
+/* Adaptation pour les téléphones mobiles */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 70vh;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.3rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+
+/* ==========================================================================
+   4. CARTES DE PLATS & SERVICES (Grille Responsive)
+   ========================================================================== */
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--primary-orange);
+  margin-bottom: 40px;
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   GRILLE RESPONSIVE DU MENU (1 col mobile, 2 tablet, 4 PC)
+   ========================================================================== */
+.menu-grid {
+  display: grid;
+  gap: 25px;
+}
+
+/* 📱 Mobile : 1 carte par ligne */
+@media (max-width: 767px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 📑 Tablette : 2 cartes par ligne */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 💻 PC / Grand Écran : 4 cartes par ligne */
+@media (min-width: 1024px) {
+  .menu-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ==========================================================================
+   STYLE DES CARTES & DÉTAILS DÉROULANTS
+   ========================================================================== */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Effet Hover (survol) */
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 107, 0, 0.4);
+  box-shadow: 0 8px 25px rgba(255, 107, 0, 0.25);
+}
+
+.card-img {
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card-img img {
+  transform: scale(1.08);
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--primary-orange);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.card-summary {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+/* --- DÉTAILS CACHÉS PAR DÉFAUT --- */
+.card-details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  font-size: 0.85rem;
+  color: #d1d1d1;
+}
+
+.card-details p {
+  margin-bottom: 8px;
+}
+
+.prep-time {
+  display: inline-block;
+  color: var(--primary-orange);
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* --- ÉTAT DE LA CARTE OUVERTE (EXPANDED) --- */
+.card.expanded {
+  border-color: var(--primary-orange);
+  box-shadow: 0 10px 30px rgba(255, 107, 0, 0.35);
+  background-color: #242424; /* Légère accentuation du fond */
+}
+
+.card.expanded .card-details {
+  max-height: 200px; /* Espace suffisant pour dévoiler le texte */
+  opacity: 1;
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 1px dashed #3a3a3a;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 15px;
+}
+
+.price {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-orange);
+}
+
+.expand-btn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.card.expanded .expand-btn {
+  color: var(--primary-orange);
+}
+
+
+/* ==========================================================================
+   5. PIED DE PAGE (Footer - Pied de la page)
+   ========================================================================== */
+.footer {
+  background-color: var(--bg-secondary);
+  padding: 50px 8% 20px;
+  border-top: 1px solid #2a2a2a;
+  margin-top: 80px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-col h3 {
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--primary-orange);
+}
+
+.footer-col p, .footer-col li {
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #2a2a2a;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+
+/* ==========================================================================
+   FORMULAIRE DE COMMANDE
+   ========================================================================== */
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.form-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+}
+
+.form-section-title {
+  font-family: var(--font-title);
+  color: var(--primary-orange);
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+/* Style des champs de saisie */
+.input-group input[type="text"],
+.input-group input[type="tel"],
+.input-group input[type="date"],
+.input-group input[type="time"],
+.input-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #121212;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet Hover et Focus sur les champs */
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 8px rgba(255, 107, 0, 0.3);
+}
+
+/* Boutons Radio */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.radio-label input[type="radio"] {
+  accent-color: var(--primary-orange);
+  width: 18px;
+  height: 18px;
+}
+
+/* Bouton de soumission */
+.submit-btn {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+/* Message de confirmation caché par défaut */
+.hidden-message {
+  display: none;
+  background-color: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-weight: 600;
+  border: 1px solid #2ecc71;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 25px 15px;
+  }
+}
+
+
+/* ==========================================================================
+   MODALE STYLE GLASSMORPHISM (Image 3)
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-container {
+  width: 100%;
+  max-width: 420px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  border-radius: 28px;
+  background-color: #121212;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+/* Cache la barre de défilement */
+.modal-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Image principale en haut */
+.modal-hero {
+  position: relative;
+  height: 280px;
+  width: 100%;
+}
+
+.modal-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Boutons Retour et Cœur sur l'image */
+.modal-btn-back,
+.modal-btn-fav {
+  position: absolute;
+  top: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: transform 0.2s ease;
+}
+
+.modal-btn-back { left: 15px; font-size: 1.8rem; }
+.modal-btn-fav { right: 15px; }
+
+.modal-btn-back:hover,
+.modal-btn-fav:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Carte translucide (Glassmorphism) */
+.modal-glass-card {
+  margin-top: -40px;
+  position: relative;
+  background: rgba(30, 30, 30, 0.75);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 24px;
+  color: #fff;
+}
+
+.modal-header-tag {
+  margin-bottom: 10px;
+}
+
+.modal-title {
+  font-family: var(--font-title, serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.modal-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.modal-rating {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+}
+
+.modal-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-orange, #ff6b00);
+}
+
+.modal-desc {
+  font-size: 0.88rem;
+  color: #b0b0b0;
+  line-height: 1.5;
+}
+
+.modal-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 20px 0;
+}
+
+/* Section Personnalisation */
+.customize-section h3 {
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+}
+
+.option-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  font-size: 0.9rem;
+}
+
+.size-selector {
+  display: flex;
+  gap: 8px;
+  background-color: #1a1a1a;
+  padding: 4px;
+  border-radius: 20px;
+}
+
+.size-btn {
+  background: transparent;
+  border: none;
+  color: #a0a0a0;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.size-btn.active {
+  background-color: var(--primary-orange, #ff6b00);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Interrupteurs (Toggle Switches) */
+.toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #333;
+  transition: .3s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--primary-orange, #ff6b00);
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.modal-add-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 14px;
+  border-radius: 30px;
+}

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Impériale</title>
+    <link rel="stylesheet" href="styles1.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- tete de ma page--> 
+        <header class="header">
+        <a href="index.html" class="logo">L'Impériale<span>.</span></a>
+            <!-- BOUTON HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+        <nav>
+              <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="menu1.html">Menu & Services</a></li>
+                <li><a href="contact1.html">Commander</a></li>
+            </ul>
+        </nav>
+    </header>
+        <!-- GRILLE DU MENU -->
+    <main class="container">
+        <h1 class="section-title">Notre Carte Gourmande</h1>
+        <p class="section-subtitle">Cliquez sur une carte pour découvrir les détails du plat</p>
+
+        <div class="menu-grid">
+            
+            <!-- PLAT 1 -->
+            <div class="card">
+                <div class="card-img">
+                    <img src="imaj-pork.jpg" alt="Griot de Porc">
+                    <span class="badge">Spécialité</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Griot de Porc</h3>
+                    <p class="card-summary">Morceaux de porc marinés et frits à la perfection.</p>
+                    
+                    <!-- DÉTAILS CACHÉS (S'AFFICHERONT AU CLIC) -->
+                    <div class="card-details">
+                        <p><strong>Ingrédients :</strong> Epaule de porc, jus d'orange amère, piment bouc, ail, poivrons.</p>
+                        <p><strong>Accompagnement :</strong> Bananes pesées et pikliz maison légerement épicé.</p>
+                        <span class="prep-time"> Temps de préparation : 15 min</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="price">1 800 gdes</span>
+                        <span class="expand-btn"><span class="expand-text">Détails</span> ▾</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PLAT 2 -->
+            <div class="card">
+                <div class="card-img">
+                    <img src="imaj-fillet.jpg" alt="Côte de Bœuf">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Côte de Bœuf Grillée</h3>
+                    <p class="card-summary">Saisie au feu de bois avec herbes aromatiques.</p>
+                    
+                    <div class="card-details">
+                        <p><strong>Ingrédients :</strong> Bœuf pur jus, beurre d'ail persillé, romarin, gros sel de mer.</p>
+                        <p><strong>Accompagnement :</strong> Frites croustillantes et poêlée de champignons.</p>
+                        <span class="prep-time"> Temps de préparation : 25 min</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="price">2 500 gdes</span>
+                        <span class="expand-btn"><span class="expand-text">Détails</span> ▾</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PLAT 3 -->
+            <div class="card">
+                <div class="card-img">
+                    <img src="imaj-crevette.jpg" alt="Crevettes Ail">
+                    <span class="badge">Chef Choice</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Crevettes Géantes</h3>
+                    <p class="card-summary">Saisies au beurre d'ail et jus de citron vert.</p>
+                    
+                    <div class="card-details">
+                        <p><strong>Ingrédients :</strong> Crevettes sauvages, ail pressé, persil frais, beurre fin.</p>
+                        <p><strong>Accompagnement :</strong> Riz blanc parfumé et bananes mûres frites.</p>
+                        <span class="prep-time"> Temps de préparation : 20 min</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="price">2 200 gdes</span>
+                        <span class="expand-btn"><span class="expand-text">Détails</span> ▾</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PLAT 4 -->
+            <div class="card">
+                <div class="card-img">
+                    <img src="imaj- poulet.jpg" alt="Poulet Rôti">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Poulet Rôti Épicé</h3>
+                    <p class="card-summary">Demi-poulet mariné aux épices créoles.</p>
+                    
+                    <div class="card-details">
+                        <p><strong>Ingrédients :</strong> Poulet élevé en plein air, thym, oignons, sauce échalote.</p>
+                        <p><strong>Accompagnement :</strong> Riz collé aux pois noirs et salade verte.</p>
+                        <span class="prep-time"> Temps de préparation : 18 min</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="price">1 500 gdes</span>
+                        <span class="expand-btn"><span class="expand-text">Détails</span> ▾</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class="card-img">
+                    <img src="imaje jerk chicken (1).jpg" alt="Griot de Porc">
+                    <span class="badge">Spécialité</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Poulet Jerk Jamaïcain</h3>
+                    <p class="card-summary">Morceaux de poulet marinés dans un mélange d'épices fumées et grillés traditionnellement au feu de bois.</p>
+                    
+                    <!-- DÉTAILS CACHÉS (S'AFFICHERONT AU CLIC) -->
+                    <div class="card-details">
+                        <p><strong>Ingrédients :</strong> Ingrédients : Poulet, piment Scotch bonnet, piment de la Jamaïque (toute-épice), thym, ail, gingembre.</p>
+                        <p><strong>Accompagnement :</strong> Rice and peas (riz aux haricots rouges) et bananes plantains frites.</p>
+                        <span class="prep-time"> Temps de préparation : 20 min</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="price">2 200 gdes</span>
+                        <span class="expand-btn"><span class="expand-text">Détails</span> ▾</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class="card-img">
+                    <img src="pizza margherita.jpg" alt="Griot de Porc">
+                    <span class="badge">Spécialité</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Pizza Margherita</h3>
+                    <p class="card-summary">Pizza traditionnelle cuite au four avec une sauce tomate acidulée, de la mozzarella fondante et du basilic frais.</p>
+                    
+                    <!-- DÉTAILS CACHÉS (S'AFFICHERONT AU CLIC) -->
+                    <div class="card-details">
+                        <p><strong>Ingrédients :</strong> : Pâte de pizza, sauce tomate maison, mozzarella fraîche, huile d'olive, basilic.</p>
+                        <p><strong>Accompagnement :</strong> Huile pimentée et petites salades vertes.</p>
+                        <span class="prep-time"> Temps de préparation : 15 min</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="price">1 900 gdes</span>
+                        <span class="expand-btn"><span class="expand-text">Détails</span> ▾</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class="card-img">
+                    <img src="imaj poisson grillé.jpg" alt="Griot de Porc">
+                    <span class="badge">Spécialité</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Poisson Grillé au Citron Vert</h3>
+                    <p class="card-summary">Poisson frais grillé à la perfection avec des marques de cuisson bien visibles et des saveurs d'agrumes.</p>
+                    
+                    <!-- DÉTAILS CACHÉS (S'AFFICHERONT AU CLIC) -->
+                    <div class="card-details">
+                        <p><strong>Ingrédients :</strong> Poisson entier (vivaneau ou daurade), citron vert, ail, thym frais, huile d'olive.</p>
+                        <p><strong>Accompagnement :</strong> Riz blanc, tranches d'avocat et bananes plantains frites.</p>
+                        <span class="prep-time"> Temps de préparation : 20 min</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="price">2 500 gdes</span>
+                        <span class="expand-btn"><span class="expand-text">Détails</span> ▾</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class="card-img">
+                    <img src="image brochette de crevette (1).jpg" alt="Griot de Porc">
+                    <span class="badge">Spécialité</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Brochettes de Crevettes Tropicales</h3>
+                    <p class="card-summary">Crevettes juteuses grillées sur des piques en bois, alternées avec des morceaux de légumes et de fruits.</p>
+                    
+                    <!-- DÉTAILS CACHÉS (S'AFFICHERONT AU CLIC) -->
+                    <div class="card-details">
+                        <p><strong>Ingrédients :</strong> Grosses crevettes, morceaux d'ananas, poivrons, oignons rouges, miel, citron.</p>
+                        <p><strong>Accompagnement :</strong> Riz parfumé à la noix de coco et petite salade fraîche.</p>
+                        <span class="prep-time"> Temps de préparation : 15 min</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="price">2 800 gdes</span>
+                        <span class="expand-btn"><span class="expand-text">Détails</span> ▾</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class="card-img">
+                    <img src="poiulet roti a la caribeenne (1).jpg" alt="Griot de Porc">
+                    <span class="badge">Spécialité</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Poulet Rôti à la Caribéenne</h3>
+                    <p class="card-summary">Demi-poulet rôti au four, présentant une peau caramélisée, brillante et riche en saveurs.</p>
+                    
+                    <!-- DÉTAILS CACHÉS (S'AFFICHERONT AU CLIC) -->
+                    <div class="card-details">
+                        <p><strong>Ingrédients :</strong> Poulet, cassonade, sauce soja, ail écrasé, gingembre frais, thym.</p>
+                        <p><strong>Accompagnement :</strong> Frites de patates douces et salade de chou crémeuse (coleslaw).</p>
+                        <span class="prep-time"> Temps de préparation : 25 min</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="price">2 200 gdes</span>
+                        <span class="expand-btn"><span class="expand-text">Détails</span> ▾</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class="card-img">
+                    <img src="imaje-BBQ.jpg" alt="Griot de Porc">
+                    <span class="badge">Spécialité</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Travers de Porc BBQ </h3>
+                    <p class="card-summary">Côtes de porc fondantes et enrobées d'une généreuse sauce barbecue exotique et collante.</p>
+                    
+                    <!-- DÉTAILS CACHÉS (S'AFFICHERONT AU CLIC) -->
+                    <div class="card-details">
+                        <p><strong>Ingrédients :</strong>Travers de porc (ribs), sauce BBQ à la goyave ou au rhum, ail, oignons, épices.</p>
+                        <p><strong>Accompagnement :</strong>Pommes de terre sautées et maïs grillé en épi.</p>
+                        <span class="prep-time"> Temps de préparation : 20 min</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="price">3 000 gdes</span>
+                        <span class="expand-btn"><span class="expand-text">Détails</span> ▾</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class="card-img">
+                    <img src="poulet croustillant (1).jpg" alt="Griot de Porc">
+                    <span class="badge">Spécialité</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Poulet Frit Croustillant</h3>
+                    <p class="card-summary">Morceaux de poulet à la panure dorée et très croustillante, marinés aux épices antillaises.</p>
+                    
+                    <!-- DÉTAILS CACHÉS (S'AFFICHERONT AU CLIC) -->
+                    <div class="card-details">
+                        <p><strong>Ingrédients :</strong> : Poulet (pilons ou cuisses), farine, paprika, ail en poudre, poivre noir, piment doux.</p>
+                        <p><strong>Accompagnement :</strong> Macaroni au fromage (macaroni pie) et salade verte.</p>
+                        <span class="prep-time"> Temps de préparation : 15 min</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="price">1 800 gdes</span>
+                        <span class="expand-btn"><span class="expand-text">Détails</span> ▾</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class="card-img">
+                    <img src="imaje-poulet boucané (2).jpg" alt="Griot de Porc">
+                    <span class="badge">Spécialité</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Poulet Boucané</h3>
+                    <p class="card-summary">Morceaux de poulet traditionnellement fumés et grillés, offrant une belle couleur dorée et foncée.</p>
+                    
+                    <!-- DÉTAILS CACHÉS (S'AFFICHERONT AU CLIC) -->
+                    <div class="card-details">
+                        <p><strong>Ingrédients :</strong> Poulet, jus de citron, ail, cive, piment végétarien, huile, marinade fumée.</p>
+                        <p><strong>Accompagnement :</strong> Riz aux haricots rouges et sauce chien (vinaigrette créole).</p>
+                        <span class="prep-time"> Temps de préparation : 25 min</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="price">2 300 gdes</span>
+                        <span class="expand-btn"><span class="expand-text">Détails</span> ▾</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class="card-img">
+                    <img src="imaje-pates (1).jpg" alt="Griot de Porc">
+                    <span class="badge">Spécialité</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Empanadas au Bœuf (Pâtés)</h3>
+                    <p class="card-summary">Chaussons de pâte dorés et farcis d'une viande hachée savoureusement assaisonnée.</p>
+                    
+                    <!-- DÉTAILS CACHÉS (S'AFFICHERONT AU CLIC) -->
+                    <div class="card-details">
+                        <p><strong>Ingrédients :</strong> Pâte brisée ou feuilletée, bœuf haché, oignons, poivrons, pâte de tomate, épices.</p>
+                        <p><strong>Accompagnement :</strong> Sauce piquante légère et petite salade de concombres.</p>
+                        <span class="prep-time"> Temps de préparation : 15 min</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="price">1 600 gdes</span>
+                        <span class="expand-btn"><span class="expand-text">Détails</span> ▾</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class="card-img">
+                    <img src="imaje-curry poulet (4).jpg" alt="Griot de Porc">
+                    <span class="badge">Spécialité</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Curry de Poulet</h3>
+                    <p class="card-summary">Ragoût de poulet onctueux et très coloré en jaune, mijoté dans une sauce riche aux épices.</p>
+                    
+                    <!-- DÉTAILS CACHÉS (S'AFFICHERONT AU CLIC) -->
+                    <div class="card-details">
+                        <p><strong>Ingrédients :</strong> Morceaux de poulet, poudre de curry, pommes de terre, lait de coco, oignons, coriandre.</p>
+                        <p><strong>Accompagnement :</strong>Riz blanc ou pain plat (roti) et chutney de mangue.</p>
+                        <span class="prep-time"> Temps de préparation : 20 min</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="price">2 100 gdes</span>
+                        <span class="expand-btn"><span class="expand-text">Détails</span> ▾</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class="card-img">
+                    <img src="imaje-plat crevettes (3).jpg" alt="Griot de Porc">
+                    <span class="badge">Spécialité</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Salade Tropicale aux Crevettes</h3>
+                    <p class="card-summary">Assiette colorée, fraîche et visuellement très attrayante, parfaite pour un repas léger.</p>
+                    
+                    <!-- DÉTAILS CACHÉS (S'AFFICHERONT AU CLIC) -->
+                    <div class="card-details">
+                        <p><strong>Ingrédients :</strong> Crevettes poêlées, mangue fraîche en dés, avocat, tomates cerises, salade mixte, vinaigrette au citron.</p>
+                        <p><strong>Accompagnement :</strong> Tranches de pain grillé ou quelques bananes pesées.</p>
+                        <span class="prep-time"> Temps de préparation : 10 min</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="price">2 400 gdes</span>
+                        <span class="expand-btn"><span class="expand-text">Détails</span> ▾</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class="card-img">
+                    <img src="imaje-ceviches poisson (5).jpg" alt="Griot de Porc">
+                    <span class="badge">Spécialité</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Ceviche de Poisson</h3>
+                    <p class="card-summary">Dés de poisson blanc ultra-frais marinés dans un jus de citron éclatant avec des touches de couleurs vives.</p>
+                    
+                    <!-- DÉTAILS CACHÉS (S'AFFICHERONT AU CLIC) -->
+                    <div class="card-details">
+                        <p><strong>Ingrédients :</strong> Filet de poisson blanc, jus de citron vert, oignons rouges, coriandre fraîche, piment doux, sel.</p>
+                        <p><strong>Accompagnement :</strong> Chips de bananes plantains croquantes ou tortillas de maïs.</p>
+                        <span class="prep-time"> Temps de préparation : 15 min</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="price">2 600 gdes</span>
+                        <span class="expand-btn"><span class="expand-text">Détails</span> ▾</span>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!-- Répétez les blocs <div class="card">...</div> jusqu'à obtenir 24 ou 32 plats -->
+
+        </div>
+    </main>
+
+  <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>L'Impériale</h3>
+                <p>Votre destination gastronomique incontournable pour des moments uniques.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Horaires</h3>
+                <p>Dimanche - Jeudi : 09h30 - 21h00</p>
+                <p>Vendredi : 09h30 - 06h00</p>
+                <p>Samedi : Fermé</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>123 Rue Villatre, Pétion-ville, Haiti</p>
+                <p>Tél : +(509) 35413533/40927052</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 L'Impériale. Tout droits est réservé</p>
+        </div>
+    </footer>
+
+
+   <!--Fichier JS-->
+   <script src="script1.js"></script>
+    <!-- FENÊTRE MODALE DE DÉTAILS (STYLE GLASSMORPHISM) -->
+<div id="product-modal" class="modal-overlay">
+    <div class="modal-container">
+        
+        <!-- Image de fond du plat -->
+        <div class="modal-hero">
+            <button class="modal-btn-back" id="modal-close">‹</button>
+            <button class="modal-btn-fav">❤️</button>
+            <img id="modal-img" src="" alt="Plat">
+        </div>
+
+        <!-- Carte translucide flottante avec les détails -->
+        <div class="modal-glass-card">
+            
+            <div class="modal-header-tag">
+                <span id="modal-badge" class="badge badge-orange">Spicy</span>
+            </div>
+
+            <h2 id="modal-title" class="modal-title">Spicy Chicken Burger</h2>
+
+            <div class="modal-meta-row">
+                <span class="modal-rating">⭐ <strong id="modal-rating-val">4.8</strong> (120)</span>
+                <span id="modal-price" class="modal-price">1 500 gdes</span>
+            </div>
+
+            <p id="modal-desc" class="modal-desc">
+                Crispy spicy chicken patty with fresh lettuce, tomato, onion and our special sauce.
+            </p>
+
+            <hr class="modal-divider">
+
+            <!-- Options de personnalisation -->
+            <div class="customize-section">
+                <h3>Personnaliser</h3>
+
+                <!-- Choix de la taille -->
+                <div class="option-row">
+                    <span>Taille</span>
+                    <div class="size-selector">
+                        <button class="size-btn active">Regular</button>
+                        <button class="size-btn">Large</button>
+                        <button class="size-btn">X Large</button>
+                    </div>
+                </div>
+
+                <!-- Suppléments avec interrupteurs (Toggles) -->
+                <div class="toggle-row">
+                    <span>Ajouter du Fromage</span>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="toggle-row">
+                    <span>Viande Supplémentaire</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="toggle-row">
+                    <span>Ajouter du Bacon</span>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <button class="btn btn-primary modal-add-btn">+ Ajouter au panier</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
